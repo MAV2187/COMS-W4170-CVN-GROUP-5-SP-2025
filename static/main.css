@@ -1,0 +1,28 @@
+<style>
+
+	.nav-link {
+		font-size: 16px;
+		text-align: left;
+		padding: 14px 16px;
+		text-decoration: none;
+		color: black;
+	}
+	.nav-link:hover {
+		background-color: #2a9d8f !important;
+		border-radius: 5px;
+	}
+
+	.navbar-custom {
+    	background-color: #264653;
+    }
+
+	.colorWhite {
+		color: white;
+	}
+
+	.colorWhite:hover {
+		color: lightgrey;
+	}
+</style>
+
+/* Mason Van Bibber MAV2187 */
