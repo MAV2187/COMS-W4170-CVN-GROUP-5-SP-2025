@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a title="Navigate To Homepage" class="navbar-brand colorWhite" href="/">3D Concepts</a>
+        <form for="Navigate To Add Skill Page" id="addButtonLink" class="d-flex mr-auto" action="/learn">
+          <button id="buttonLearn" title="Navigate To The Learning Section" class="btn btn-outline-success mr-auto" type="submit">Learn</button>
+        </form>
+        <form for="Navigate To Add Skill Page" id="addButtonLink" class="d-flex mr-auto" action="/quiz">
+          <button id="buttonLearn" title="Navigate To The Quiz" class="btn btn-outline-success mr-auto" type="submit">Quiz</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container">   
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
