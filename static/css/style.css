@@ -1,5 +1,16 @@
+:root{
+    --main-color:#748D92;
+    --secondary-color: #F2F2F2;
+    --accent-color: #124E66;
+    --accent-highlight-color: #3282a1;
+    --black-color: #252525;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+    --light-gray-color: rgba(255, 255, 255, 0.4);
+    --dark-gray-color: rgba(210, 207, 207, 0.174);
+}
+
 body {
-    background-color: #f8f9fa;
+    background-color: var(--main-color);
     padding-bottom: 50px;
 }
 
