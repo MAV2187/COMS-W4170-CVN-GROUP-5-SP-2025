@@ -140,7 +140,7 @@
                     {"value": "cone", "text": "Cone"},
                     {"value": "rectangular prism", "text": "Rectangular Prism"}
                 ],
-                "correct_answer": "torus",
+                "correct_answer": ["torus", "sphere"],
                 "description": "Drag the correct answers to the box:"
             }
         ]
@@ -164,7 +164,7 @@
                     {"value": "cylinder", "text": "Cylinder"},
                     {"value": "rectangular prism", "text": "Rectangular Prism"}
                 ],
-                "correct_answer": "torus",
+                "correct_answer": ["cone","torus","sphere"],
                 "description": "Drag the correct answers to the box:"
             }
         ]
@@ -178,14 +178,17 @@
         "questions": [
             {
                 "id": "q1",
+                "type": "number-input",
                 "text": "What basic primitives are used to create the volume to the right? For negative spaces, input a negative number... SLIDE 22",
                 "options": [
-                    {"value": "A", "text": "Cube"},
-                    {"value": "B", "text": "Cone"},
-                    {"value": "C", "text": "Cylinder"},
-                    {"value": "D", "text": "Torus"}
+                    {"value": "A", "text": "Cyclinder"},
+                    {"value": "B", "text": "Rectangular Prism"},
+                    {"value": "C", "text": "Torus"},
+                    {"value": "D", "text": "Cone"},
+                    {"value": "E", "text": "Wedge"},
+                    {"value": "F", "text": "Sphere"}
                 ],
-                "correct_answer": "B"
+                "correct_answer": [{"A": 2}, {"B": 3}, {"C": 1}, {"D": 0}, {"E": -1}, {"F": 0}]
             }
         ]
     },
@@ -198,15 +201,19 @@
         "questions": [
             {
                 "id": "q1",
-                "type": "drag-drop",
+                "type": "number-input",
                 "text": "Given the item to the right, what shapes could you break it down into? Assume the handle has a constant cross-section... SLIDE 24",
-                "drag_items": [
-                    {"value": "torus", "text": "Torus"},
-                    {"value": "sphere", "text": "Sphere"},
-                    {"value": "cone", "text": "Cone"}
+                "options": [
+                    {"value": "A", "text": "Cyclinder"},
+                    {"value": "B", "text": "Rectangular Prism"},
+                    {"value": "C", "text": "Torus"},
+                    {"value": "D", "text": "Cone"},
+                    {"value": "E", "text": "Wedge"},
+                    {"value": "F", "text": "Sphere"},
+                    {"value": "G", "text": "2D Profile Along Path"}
                 ],
-                "correct_answer": "torus",
-                "description": "Drag the correct answer to the box:"
+                "correct_answer": [{"A": 0}, {"B": 0}, {"C": 0}, {"D": 0}, {"E": 0}, {"F": 0}, {"G": 1}],
+                "description": "Input the correct numbers into the boxes:"
             }
         ]
     }
