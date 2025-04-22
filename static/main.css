@@ -1,28 +1,28 @@
-<style>
 
-	.nav-link {
-		font-size: 16px;
-		text-align: left;
-		padding: 14px 16px;
-		text-decoration: none;
-		color: black;
-	}
-	.nav-link:hover {
-		background-color: #2a9d8f !important;
-		border-radius: 5px;
-	}
 
-	.navbar-custom {
-    	background-color: #264653;
-    }
+.nav-link {
+	font-size: 16px;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: black;
+}
+.nav-link:hover {
+	background-color: #2a9d8f !important;
+	border-radius: 5px;
+}
 
-	.colorWhite {
-		color: white;
-	}
+.navbar-custom {
+	background-color: #264653;
+}
 
-	.colorWhite:hover {
-		color: lightgrey;
-	}
-</style>
+.colorWhite {
+	color: white;
+}
+
+.colorWhite:hover {
+	color: lightgrey;
+}
+
 
 /* Mason Van Bibber MAV2187 */

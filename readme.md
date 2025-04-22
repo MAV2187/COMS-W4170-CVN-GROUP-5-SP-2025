@@ -1,5 +1,9 @@
 You must have flask installed to run this application
 
+Python Dependencies Needed: 
+pip install flask
+pip install numpy
+
 Tun this code in the terminal with 
 python server.py
 or
