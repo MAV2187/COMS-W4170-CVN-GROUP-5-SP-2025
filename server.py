@@ -97,7 +97,26 @@ def submit_quiz(module_id):
         q_id = question['id']
         user_answer = user_answers.get(q_id, '').strip().lower()
         
-        if question.get('type') == 'matching':
+        if question.get('type') == 'drag-drop':
+            # Check if all correct answers are selected
+            user_selected = set(user_answer.split(','))
+            correct_set = set(question['correct_answer'])
+            if user_selected == correct_set:
+                correct_answers += 1
+        elif question.get('type') == 'number-input':
+            # Check if all input boxes match the correct_answer structure
+            is_correct = True
+            for correct_input in question['correct_answer']:
+                for key, value in correct_input.items():
+                    user_input = int(user_answers.get(f"{q_id}_{key}", 0))
+                    if user_input != value:
+                        is_correct = False
+                        break
+                if not is_correct:
+                    break
+            if is_correct:
+                correct_answers += 1
+        elif question.get('type') == 'matching':
             # Handle matching questions with proper set comparison
             try:
                 user_pairs = set(frozenset(pair.split(':')) for pair in user_answer.split(',') if pair)

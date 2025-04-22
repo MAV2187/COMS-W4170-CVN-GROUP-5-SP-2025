@@ -71,6 +71,26 @@
                             </div>
                         </div>
                         
+                        {% elif question.type == 'number-input' %}
+                        <div class="number-input-question">
+                            <h6>{{ question.text }}</h6>
+                            <div class="row">
+                                {% for option in question.options %}
+                                <div class="col-12 mb-3">
+                                    <div class="input-group">
+                                        <button type="button" class="btn btn-outline-secondary decrement-btn" data-target="{{ question.id }}_{{ loop.index }}">-</button>
+                                        <input type="number" class="form-control text-center number-input" 
+                                               id="{{ question.id }}_{{ loop.index }}" 
+                                               name="{{ question.id }}_{{ option.value }}" 
+                                               value="0" min="-100" max="100" required>
+                                        <button type="button" class="btn btn-outline-secondary increment-btn" data-target="{{ question.id }}_{{ loop.index }}">+</button>
+                                    </div>
+                                    <label class="form-label mt-1">{{ option.text }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
                         {% else %}
                         <div class="ms-3">
                             {% for option in question.options %}
@@ -172,9 +192,34 @@ $(document).ready(function() {
         $(this).removeClass('border-primary bg-light');
         const value = e.originalEvent.dataTransfer.getData('text/plain');
         const text = $(`.drag-item[data-value="${value}"]`).text();
-        $(this).html(`<span class="badge bg-primary">${text}</span>`);
-        $(this).find('.drop-value').val(value);
+
+        // Append the new answer to the drop zone
+        const existingAnswers = $(this).find('.badge');
+        if (!existingAnswers.filter((_, el) => $(el).data('value') === value).length) {
+            $(this).append(`
+                <span class="badge bg-primary me-2" data-value="${value}">
+                    ${text} <button type="button" class="btn-close btn-close-white btn-sm ms-1 remove-item" aria-label="Remove"></button>
+                </span>
+            `);
+        }
+
+        // Update the hidden input with all selected values
+        updateDropZoneInput($(this));
     });
+
+    // Remove item from drop zone
+    $(document).on('click', '.remove-item', function() {
+        const badge = $(this).closest('.badge');
+        const dropZone = badge.closest('.drop-zone');
+        badge.remove();
+        updateDropZoneInput(dropZone);
+    });
+
+    // Update the hidden input with all selected values
+    function updateDropZoneInput(dropZone) {
+        const selectedValues = dropZone.find('.badge').map((_, el) => $(el).data('value')).get();
+        dropZone.find('.drop-value').val(selectedValues.join(','));
+    }
 
     // Matching functionality
     let draggedItem = null;
@@ -219,6 +264,22 @@ $(document).ready(function() {
         });
         container.find('.match-value').val(matches.join(','));
     }
+
+    // Increment button functionality
+    $('.increment-btn').on('click', function() {
+        const targetId = $(this).data('target');
+        const input = $(`#${targetId}`);
+        const currentValue = parseInt(input.val()) || 0;
+        input.val(currentValue + 1);
+    });
+
+    // Decrement button functionality
+    $('.decrement-btn').on('click', function() {
+        const targetId = $(this).data('target');
+        const input = $(`#${targetId}`);
+        const currentValue = parseInt(input.val()) || 0;
+        input.val(currentValue - 1);
+    });
 });
 </script>
 {% endblock %}
