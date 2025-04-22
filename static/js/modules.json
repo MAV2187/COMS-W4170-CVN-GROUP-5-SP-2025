@@ -201,11 +201,10 @@
                     {"value": "A", "text": "Cyclinder"},
                     {"value": "B", "text": "Rectangular Prism"},
                     {"value": "C", "text": "Torus"},
-                    {"value": "D", "text": "Cone"},
-                    {"value": "E", "text": "Wedge"},
-                    {"value": "F", "text": "Sphere"}
+                    {"value": "D", "text": "Wedge"},
+                    {"value": "E", "text": "Sphere"}
                 ],
-                "correct_answer": [{"A": 2}, {"B": 3}, {"C": 1}, {"D": 0}, {"E": -1}, {"F": 0}]
+                "correct_answer": [{"A": 2}, {"B": 3}, {"C": 1}, {"D": -1}, {"E": 0}]
             }
         ]
     },
@@ -226,10 +225,9 @@
                     {"value": "B", "text": "Rectangular Prism"},
                     {"value": "C", "text": "Torus"},
                     {"value": "D", "text": "Cone"},
-                    {"value": "E", "text": "Wedge"},
-                    {"value": "G", "text": "2D Profile Along Path"}
+                    {"value": "E", "text": "2D Profile Along Path"}
                 ],
-                "correct_answer": [{"A": 0}, {"B": 0}, {"C": 0}, {"D": 0}, {"E": 0}, {"F": 0}, {"G": 1}],
+                "correct_answer": [{"A": 0}, {"B": 0}, {"C": 0}, {"D": 0}, {"E": 1}],
                 "description": "Input the correct numbers into the boxes:"
             }
         ]
