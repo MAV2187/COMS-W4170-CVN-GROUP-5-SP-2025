@@ -128,7 +128,7 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Quiz2.glb",
         "questions": [
             {
                 "id": "q1",
@@ -150,7 +150,7 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Cone_Sphere_Torus.glb",
         "questions": [
             {
                 "id": "q1",
@@ -174,7 +174,7 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Quiz4.glb",
         "questions": [
             {
                 "id": "q1",
@@ -194,7 +194,7 @@
     },
     "18": {
         "title": "Physical Primitive Combination",
-        "image1": "",
+        "image1": "Quiz_5.jpg",
         "image2": "",
         "image3": "",
         "model": "",
