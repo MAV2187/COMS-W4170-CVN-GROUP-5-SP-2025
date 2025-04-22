@@ -147,6 +147,9 @@
             {% endfor %}
         </form>
     </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{ module.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ module.progress }}%;">{{ module.progress }}%</div>
+    </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">
             {% if module_id > 7 %}
