@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-info text-white">
+        <h3 class="card-title">{{ module.title }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="module-content">
+            {% if module.image %}
+            <img src="{{ url_for('static', filename='images/' + module.image) }}" 
+                 class="img-fluid mb-3 rounded" 
+                 alt="{{ module.title }}">
+            {% endif %}
+            <div class="module-text">
+                {{ module.content|safe }}
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between">
+            {% if module_id > 1 %}
+            <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+            {% else %}
+            <span></span>
+            {% endif %}
+            
+            <div class="text-muted">
+                Module {{ module_id }} of {{ total_modules }}
+            </div>
+            
+            {% if module_id < total_modules %}
+            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary">Next</a>
+            {% else %}
+            <a href="{{ url_for('load_module', module_id=7) }}" class="btn btn-success">Start Quizzes</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    // Highlight current module in dropdown
+    const currentModule = {{ module_id }};
+    $(`.dropdown-item[href*="/module/${currentModule}"]`).addClass('active');
+});
+</script>
+{% endblock %}
