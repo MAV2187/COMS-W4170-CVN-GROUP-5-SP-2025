@@ -1,34 +1,186 @@
-<!DOCTYPE html>
-
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-<html lang="en">
-    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
-    <body>
-        <div id="overallContainer" class="overall">
-            <div class="row">
-                <div class="col-lg-12">
-                    <span> QUIZ PAGE </span>
+<div class="card">
+    <div class="card-header bg-warning text-dark">
+        <h3 class="card-title">{{ module.title }}</h3>
+    </div>
+    <div class="card-body">
+        <form id="quizForm" method="POST" action="{{ url_for('submit_quiz', module_id=module_id) }}">
+            {% for question in module.questions %}
+            <div class="quiz-question mb-4 p-3 border rounded">
+                <h5>{{ question.text }}</h5>
+                
+                {% if question.type == 'drag-drop' %}
+                <div class="drag-drop-question">
+                    <div class="drag-elements mb-3">
+                        {% for item in question.drag_items %}
+                        <span class="drag-item badge bg-secondary me-2 mb-2" draggable="true"
+                              data-value="{{ item.value }}">{{ item.text }}</span>
+                        {% endfor %}
+                    </div>
+                    <p class="fw-bold">{{ question.description }}</p>
+                    <div class="drop-zone p-3 border rounded bg-light mb-3">
+                        <p class="text-muted mb-0">Drop answer here</p>
+                        <input type="hidden" name="{{ question.id }}" class="drop-value" required>
+                    </div>
                 </div>
+                
+                {% elif question.type == 'matching' %}
+                <div class="matching-question">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h6>Items</h6>
+                            <ul class="list-group match-items">
+                                {% for item in question.left_items %}
+                                <li class="list-group-item d-flex align-items-center" 
+                                    data-value="{{ item.value }}" draggable="true">
+                                    <span class="drag-handle me-2">☰</span>
+                                    {{ item.text }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-2 text-center align-self-center">
+                            <i class="bi bi-arrow-left-right fs-3 text-muted d-none d-md-block"></i>
+                            <i class="bi bi-arrow-down-up fs-3 text-muted d-md-none"></i>
+                        </div>
+                        <div class="col-md-5">
+                            <h6>Matches</h6>
+                            <ul class="list-group match-targets">
+                                {% for item in question.right_items %}
+                                <li class="list-group-item" 
+                                    data-value="{{ item.value }}" 
+                                    data-matched="false">
+                                    {{ item.text }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="hidden" name="{{ question.id }}" class="match-value" required>
+                </div>
+                
+                {% elif question.type == 'fill-blank' %}
+                <div class="fill-blank-question">
+                    <div class="input-group mb-3" style="max-width: 400px;">
+                        <span class="input-group-text">Answer:</span>
+                        <input type="text" class="form-control" name="{{ question.id }}" 
+                               placeholder="Type your answer" required>
+                    </div>
+                </div>
+                
+                {% else %}
+                <div class="ms-3">
+                    {% for option in question.options %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" 
+                               name="{{ question.id }}" 
+                               id="{{ question.id }}_{{ loop.index }}" 
+                               value="{{ option.value }}" required>
+                        <label class="form-check-label" for="{{ question.id }}_{{ loop.index }}">
+                            {{ option.text }}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
-        </div>
-        <div>
-            <model-viewer alt="Pill Example" src="/static/Pill.glb" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 600px; width: 100%;"></model-viewer>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <form for="Navigate Back" id="BackButtonLink" class="d-flex mr-auto" action="/learn">
-                    <button id="buttonBack" title="Navigate Back" class="btn btn-danger" type="submit">Back</button>
-                </form>
+            {% endfor %}
+        </form>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between align-items-center">
+            {% if module_id > 7 %}
+            <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+            {% else %}
+            <a href="{{ url_for('load_module', module_id=6) }}" class="btn btn-info">Back to Learning</a>
+            {% endif %}
+            
+            <div class="text-muted me-3 d-none d-md-block">
+                Module {{ module_id }} of {{ total_modules }}
             </div>
-            <div class="col-lg-6">
-                <form for="Navigate Next" id="NextButtonLink" class="d-flex justify-content-end ml-auto" action="/">
-                    <button id="buttonNext" title="Navigate Next" class="btn btn-primary" type="submit">Next</button>
-                </form>
-            </div>
+            
+            <button type="submit" form="quizForm" class="btn btn-primary">
+                {% if module_id < total_modules %}Submit and Continue {% else %}Finish Quiz{% endif %}
+            </button>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    // Highlight current module in dropdown
+    const currentModule = {{ module_id }};
+    $(`.dropdown-item[href*="/module/${currentModule}"]`).addClass('active');
+
+    // Drag and drop functionality
+    $('.drag-item').on('dragstart', function(e) {
+        e.originalEvent.dataTransfer.setData('text/plain', $(this).data('value'));
+        $(this).addClass('bg-primary');
+    }).on('dragend', function() {
+        $(this).removeClass('bg-primary');
+    });
+
+    $('.drop-zone').on('dragover', function(e) {
+        e.preventDefault();
+        $(this).addClass('border-primary bg-light');
+    }).on('dragleave', function() {
+        $(this).removeClass('border-primary bg-light');
+    }).on('drop', function(e) {
+        e.preventDefault();
+        $(this).removeClass('border-primary bg-light');
+        const value = e.originalEvent.dataTransfer.getData('text/plain');
+        const text = $(`.drag-item[data-value="${value}"]`).text();
+        $(this).html(`<span class="badge bg-primary">${text}</span>`);
+        $(this).find('.drop-value').val(value);
+    });
+
+    // Matching functionality
+    let draggedItem = null;
+
+    $('.match-items li').on('dragstart', function(e) {
+        draggedItem = $(this);
+        e.originalEvent.dataTransfer.setData('text/plain', $(this).data('value'));
+        $(this).addClass('bg-light');
+    }).on('dragend', function() {
+        $(this).removeClass('bg-light');
+    });
+
+    $('.match-targets li').on('dragover', function(e) {
+        e.preventDefault();
+        if (!$(this).attr('data-matched') || $(this).attr('data-matched') === 'false') {
+            $(this).addClass('bg-light');
+        }
+    }).on('dragleave', function() {
+        $(this).removeClass('bg-light');
+    }).on('drop', function(e) {
+        e.preventDefault();
+        $(this).removeClass('bg-light');
+        
+        if ($(this).attr('data-matched') === 'true') return;
+        
+        const leftValue = draggedItem.data('value');
+        const rightValue = $(this).data('value');
+        
+        // Mark as matched
+        $(this).attr('data-matched', 'true')
+               .html(`${draggedItem.text()} → ${$(this).text()}`)
+               .data('left-value', leftValue);
+        
+        // Update hidden input with all matches
+        updateMatchingInput($(this).closest('.matching-question'));
+    });
+
+    function updateMatchingInput(container) {
+        const matches = [];
+        container.find('.match-targets li[data-matched="true"]').each(function() {
+            matches.push(`${$(this).data('left-value')}:${$(this).data('value')}`);
+        });
+        container.find('.match-value').val(matches.join(','));
+    }
+});
+</script>
 {% endblock %}

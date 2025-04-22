@@ -1,0 +1,140 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-nav .nav-link.text-warning:hover {
+    color: #ffc107 !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item.active {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+/* Quiz Styles */
+.quiz-question {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.drag-item {
+    cursor: grab;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.drag-item:hover {
+    transform: scale(1.05);
+}
+
+.drop-zone {
+    min-height: 50px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drop-zone.border-primary {
+    border: 2px dashed #0d6efd !important;
+}
+
+.match-items li, .match-targets li {
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 5px;
+}
+
+.match-items li:hover {
+    background-color: #e9ecef;
+}
+
+.match-targets li[data-matched="true"] {
+    background-color: #e7f5e8;
+    border-left: 3px solid #2e7d32;
+}
+
+.drag-handle {
+    cursor: move;
+}
+
+.fill-blank-question input {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Results Page */
+.score-details .card {
+    transition: transform 0.2s;
+}
+
+.score-details .card:hover {
+    transform: translateY(-3px);
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        padding-top: 1rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .matching-question .row {
+        flex-direction: column;
+    }
+    .matching-question .col-md-5 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
