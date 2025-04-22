@@ -124,7 +124,7 @@
         ]
     },
     "15": {
-        "title": "DRAFT Primitive Combinations: Easy",
+        "title": "Primitive Combinations: Easy",
         "image1": "",
         "image2": "",
         "image3": "",
@@ -133,7 +133,7 @@
             {
                 "id": "q1",
                 "type": "drag-drop",
-                "text": "What basic primitives are used to create the volume to the right?... SLIDE 18",
+                "text": "What basic primitives are used to create the volume to the right?",
                 "drag_items": [
                     {"value": "torus", "text": "Torus"},
                     {"value": "sphere", "text": "Sphere"},
@@ -146,7 +146,7 @@
         ]
     },
     "16": {
-        "title": "DRAFT Primitive Combinations: Medium",
+        "title": "Primitive Combinations: Medium",
         "image1": "",
         "image2": "",
         "image3": "",
@@ -155,7 +155,7 @@
             {
                 "id": "q1",
                 "type": "drag-drop",
-                "text": "What basic primitives are used to create the volume to the right? Drag the right answers onto the model viewer:... SLIDE 20",
+                "text": "What basic primitives are used to create the volume to the right? Drag the right answers onto the model viewer:",
                 "drag_items": [
                     {"value": "torus", "text": "Torus"},
                     {"value": "sphere", "text": "Sphere"},
@@ -170,7 +170,7 @@
         ]
     },
     "17": {
-        "title": "DRAFT Primitive Combinations: Hard",
+        "title": "Primitive Combinations: Hard",
         "image1": "",
         "image2": "",
         "image3": "",
@@ -179,7 +179,7 @@
             {
                 "id": "q1",
                 "type": "number-input",
-                "text": "What basic primitives are used to create the volume to the right? For negative spaces, input a negative number... SLIDE 22",
+                "text": "What basic primitives are used to create the volume to the right? For negative spaces, input a negative number",
                 "options": [
                     {"value": "A", "text": "Cyclinder"},
                     {"value": "B", "text": "Rectangular Prism"},
@@ -193,7 +193,7 @@
         ]
     },
     "18": {
-        "title": "DRAFT Physical Primitive Combination",
+        "title": "Physical Primitive Combination",
         "image1": "",
         "image2": "",
         "image3": "",
@@ -202,7 +202,7 @@
             {
                 "id": "q1",
                 "type": "number-input",
-                "text": "Given the item to the right, what shapes could you break it down into? Assume the handle has a constant cross-section... SLIDE 24",
+                "text": "Given the item to the right, what shapes could you break it down into? Assume the handle has a constant cross-section",
                 "options": [
                     {"value": "A", "text": "Cyclinder"},
                     {"value": "B", "text": "Rectangular Prism"},
