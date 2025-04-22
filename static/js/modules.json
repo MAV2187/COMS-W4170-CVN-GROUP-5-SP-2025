@@ -56,51 +56,51 @@
         "model": "Pill.glb"
     },
     "8": {
-        "title": "DRAFT Case Study: Gear - Introduction",
-        "content": "<p>These ideas are the building blocks of many common shapes around us. Let's apply this by taking a look at a more complex real world... SLIDE 10</p>",
+        "title": "Case Study: Gear - Introduction",
+        "content": "<p>These ideas are the building blocks of many common shapes around us. Let's apply this by taking a look at a more complex real-world shape: a <strong>keyed pinion gear</strong>.</p><p>Assume there are 52 teeth that are all straight. To break this down, we need to think about what basic primitives would be used to first fill the positive space, and then take away the negative space.</p><p>These basic primitives are:</p><ul><li><strong>Cylinders</strong></li><li><strong>Rectangular Prisms</strong></li><li><strong>Wedges</strong></li></ul>",
         "image1": "Physical_Gear.JPG",
         "image2": "",
         "image3": "",
         "model": ""
     },
     "9": {
-        "title": "DRAFT Case Study: Gear - Cylinders",
-        "content": "<p>Cylinders:... SLIDE 11</p>",
-        "image1": "Gear_Model1.JPG",
-        "image2": "Gear_Model2.JPG",
-        "image3": "Gear_Model3.JPG",
+        "title": "Case Study: Gear - Cylinders",
+        "content": "<div class='clearfix'><img src='/static/images/Physical_Gear.JPG' class='float-end ms-5 mb-3' style='max-width: 180px;' alt='Reference gear image'><p><strong>1.</strong> The overall shape is made from one big <strong>cylinder</strong> (+1), with a smaller negative space cylinder taking out the area above the holes — the shallow cut that does not extend through the gear (-1).</p><p><strong>2.</strong> A larger positive space <strong>cylinder</strong> creates the shaft boss — the raised volume in the center (+1).</p><p><strong>3.</strong> Six holes surround the shaft hole, and one hole creates an opening for the shaft. These are all <strong>negative space cylinders</strong> (-7).</p></div><div class='d-flex justify-content-center gap-4 mt-4'><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>1</div><img src='/static/images/Gear_Model1.JPG' style='max-width: 160px; display: block;' alt='Main cylinder'></div><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>2</div><img src='/static/images/Gear_Model2.JPG' style='max-width: 160px; display: block;' alt='Shaft boss'></div><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>3</div><img src='/static/images/Gear_Model3.JPG' style='max-width: 160px; display: block;' alt='Final holes'></div></div>",
+        "image1": "",
+        "image2": "",
+        "image3": "",
         "model": ""
     },
     "10": {
-        "title": "DRAFT Case Study: Gear - Rectangular Prisms",
-        "content": "<p>Rectangular Prisms: ... SLIDE 12</p>",
-        "image1": "Gear_Model4.JPG",
-        "image2": "Gear_Model4B.JPG",
-        "image3": "Gear_Model5.JPG",
+        "title": "Case Study: Gear - Rectangular Prisms",
+        "content": "<div class='clearfix'><img src='/static/images/Physical_Gear.JPG' class='float-end ms-5 mb-3' style='max-width: 180px;' alt='Reference gear image'><p><strong>4.</strong> Each tooth has a <strong>negative space rectangular prism</strong> next to it (-52).</p><p><strong>4B.</strong> This close-up shows how the prisms are used to create the spacing between teeth.</p><p><strong>5.</strong> The keyway in the center is one more <strong>negative space rectangular prism</strong> (-1).</p></div><div class='d-flex justify-content-center gap-4 mt-4'><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>4</div><img src='/static/images/Gear_Model4.JPG' style='max-width: 160px; display: block;' alt='Tooth prisms'></div><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>4B</div><img src='/static/images/Gear_Model4B.JPG' style='max-width: 160px; display: block;' alt='Tooth close-up'></div><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>5</div><img src='/static/images/Gear_Model5.JPG' style='max-width: 160px; display: block;' alt='Keyway prism'></div></div>",
+        "image1": "",
+        "image2": "",
+        "image3": "",
         "model": ""
     },
     "11": {
-        "title": "DRAFT Case Study: Gear - Wedges",
-        "content": "<p>Wedges:... SLIDE 13</p>",
-        "image1": "Gear_Model6.JPG",
-        "image2": "Gear_Model6B.JPG",
+        "title": "Case Study: Gear - Wedges",
+        "content": "<div class='clearfix'><img src='/static/images/Physical_Gear.JPG' class='float-end ms-5 mb-3' style='max-width: 180px;' alt='Reference gear image'><p><strong>6.</strong> Each tooth is refined using two <strong>negative space wedges</strong>. This gives the teeth their angled faces and mechanical fit.</p><p><strong>6B.</strong> Since there are 52 teeth and 2 wedges per tooth, a total of 104 negative space wedges are used (-104).</p></div><div class='d-flex justify-content-center gap-4 mt-4'><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>6</div><img src='/static/images/Gear_Model6.JPG' style='max-width: 160px; display: block;' alt='Wedges on teeth'></div><div style='position: relative; display: inline-block;'><div style='position: absolute; top: 5px; left: 5px; background-color: white; color: black; font-weight: bold; padding: 2px 6px; font-size: 14px; border-radius: 4px;'>6B</div><img src='/static/images/Gear_Model6B.JPG' style='max-width: 160px; display: block;' alt='Wedge count illustration'></div></div>",
+        "image1": "",
+        "image2": "",
         "image3": "",
         "model": ""
     },
     "12": {
-        "title": "DRAFT Case Study: Gear - Negative Spaces and Manufacturing",
-        "content": "<p>This negative net feature count yields the question: how can... SLIDE 14</p>",
+        "title": "Case Study: Gear - Negative Spaces and Manufacturing",
+        "content": "<p>Breaking this down into the basic positive and negative space shapes, we see it consists of a net:</p><ul><li>-6 cylinders</li><li>-53 rectangular prisms</li><li>-104 wedges</li></ul><p>This negative net feature count raises the question: how can all of the net volumes be negative?</p><p>The answer lies in the process of <strong>subtractive manufacturing</strong>, where material is removed from a solid block to create the final object.</p><p>Common subtractive methods include:</p><ul><li>Chiseling</li><li>Drilling</li><li>Cutting</li></ul><p>This is in contrast to <strong>additive manufacturing</strong>, where material is added layer by layer. Examples include:</p><ul><li>3D printing</li><li>Welding</li><li>Some forms of pottery</li></ul>",
         "image1": "Physical_Gear2.JPG",
         "image2": "",
         "image3": "",
         "model": ""
     },
     "13": {
-        "title": "DRAFT Conclusion & Quiz Readiness Check",
-        "content": "<p>With these concepts in mind, look around the room and try to break down everyday objects into basic... SLIDE 15</p>",
-        "image1": "Altoids.JPG",
-        "image2": "Step_Drill.JPG",
-        "image3": "Steering_Wheel.JPG",
+        "title": "Conclusion & Quiz Readiness",
+        "content": "<p>With these concepts in mind, look around the room and try to break down everyday objects into basic primitives — whether that be 2D shapes along a path or 3D primitives.</p><p>Most mechanical objects and simple items can be broken down into discrete shapes. Once these shapes have been identified, modeling them and representing them digitally becomes a much easier next step.</p><div class='d-flex justify-content-center gap-4 mt-4 mb-4'><img src='/static/images/Altoids.JPG' style='max-width: 160px;' alt='Altoids tin'><img src='/static/images/Step_Drill.JPG' style='max-width: 160px;' alt='Step drill bit'><img src='/static/images/Steering_Wheel.JPG' style='max-width: 160px;' alt='Steering wheel'></div><p>To review the information again, press the learn button above. If you feel ready, press the next button to proceed to the quiz to test your knowledge.</p>",
+        "image1": "",
+        "image2": "",
+        "image3": "",
         "model": ""
     },
     "14": {
