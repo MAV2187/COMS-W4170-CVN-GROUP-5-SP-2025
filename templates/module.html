@@ -7,13 +7,47 @@
     </div>
     <div class="card-body">
         <div class="module-content">
-            {% if module.image %}
-            <img src="{{ url_for('static', filename='images/' + module.image) }}" 
-                 class="img-fluid mb-3 rounded" 
-                 alt="{{ module.title }}">
-            {% endif %}
-            <div class="module-text">
-                {{ module.content|safe }}
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="module-text">
+                        {{ module.content|safe }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image1 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image1) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image2 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image2) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image3 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image3) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if module.model %}
+                        <model-viewer alt="{{ module.title }}" src="{{ url_for('static', filename='models/' + module.model) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 100%;"></model-viewer>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
