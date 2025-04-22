@@ -125,10 +125,10 @@
     },
     "15": {
         "title": "Primitive Combinations: Easy",
-        "image1": "",
+        "image1": "filler.png",
         "image2": "",
         "image3": "",
-        "model": "Quiz2.glb",
+        "model": "",
         "questions": [
             {
                 "id": "q1",
@@ -147,10 +147,10 @@
     },
     "16": {
         "title": "Primitive Combinations: Medium",
-        "image1": "",
+        "image1": "filler.png",
         "image2": "",
         "image3": "",
-        "model": "Cone_Sphere_Torus.glb",
+        "model": "",
         "questions": [
             {
                 "id": "q1",
@@ -171,10 +171,10 @@
     },
     "17": {
         "title": "Primitive Combinations: Hard",
-        "image1": "",
+        "image1": "filler.png",
         "image2": "",
         "image3": "",
-        "model": "Quiz4.glb",
+        "model": "",
         "questions": [
             {
                 "id": "q1",
@@ -194,7 +194,7 @@
     },
     "18": {
         "title": "Physical Primitive Combination",
-        "image1": "Quiz_5.jpg",
+        "image1": "filler.png",
         "image2": "",
         "image3": "",
         "model": "",
