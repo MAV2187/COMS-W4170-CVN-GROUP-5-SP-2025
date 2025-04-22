@@ -125,10 +125,10 @@
     },
     "15": {
         "title": "Primitive Combinations: Easy",
-        "image1": "filler.png",
+        "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Quiz2.glb",
         "questions": [
             {
                 "id": "q1",
@@ -147,10 +147,10 @@
     },
     "16": {
         "title": "Primitive Combinations: Medium",
-        "image1": "filler.png",
+        "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Cone_Sphere_Torus.glb",
         "questions": [
             {
                 "id": "q1",
@@ -171,10 +171,10 @@
     },
     "17": {
         "title": "Primitive Combinations: Hard",
-        "image1": "filler.png",
+        "image1": "",
         "image2": "",
         "image3": "",
-        "model": "",
+        "model": "Quiz4.glb",
         "questions": [
             {
                 "id": "q1",
@@ -194,7 +194,7 @@
     },
     "18": {
         "title": "Physical Primitive Combination",
-        "image1": "filler.png",
+        "image1": "Quiz_5.jpg",
         "image2": "",
         "image3": "",
         "model": "",
@@ -209,7 +209,6 @@
                     {"value": "C", "text": "Torus"},
                     {"value": "D", "text": "Cone"},
                     {"value": "E", "text": "Wedge"},
-                    {"value": "F", "text": "Sphere"},
                     {"value": "G", "text": "2D Profile Along Path"}
                 ],
                 "correct_answer": [{"A": 0}, {"B": 0}, {"C": 0}, {"D": 0}, {"E": 0}, {"F": 0}, {"G": 1}],

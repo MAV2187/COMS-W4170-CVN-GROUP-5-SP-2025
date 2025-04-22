@@ -5,7 +5,7 @@
     <div class="card-header bg-warning text-dark">
         <h3 class="card-title">{{ module.title }}</h3>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="height: 700px;">
         <form id="quizForm" method="POST" action="{{ url_for('submit_quiz', module_id=module_id) }}">
             {% for question in module.questions %}
             <div class="quiz-question mb-4 p-3 border rounded">
