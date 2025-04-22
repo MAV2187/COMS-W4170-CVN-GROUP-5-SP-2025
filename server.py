@@ -37,7 +37,7 @@ def save_user_progress(username, module_id, score=None):
             'last_accessed': datetime.now().isoformat()
         }
     
-    if module_id <= 6:  # Learning modules
+    if module_id <= 13:  # Learning modules
         user_progress[username]['current_module'] = module_id
     elif score is not None:  # Quiz modules
         user_progress[username]['quiz_scores'][str(module_id)] = score
@@ -75,12 +75,12 @@ def load_module(module_id):
     save_user_progress(username, module_id)
     
     module = modules_data[str(module_id)]
-    template = 'module.html' if module_id <= 6 else 'quiz.html'
+    template = 'module.html' if module_id <= 13 else 'quiz.html'
     
     return render_template(template,
                          module=module,
                          module_id=module_id,
-                         is_quiz=module_id > 6,
+                         is_quiz=module_id > 13,
                          total_modules=len(modules_data))
 
 @app.route('/submit_quiz/<int:module_id>', methods=['POST'])
@@ -135,7 +135,7 @@ def show_results():
     return render_template('results.html',
                          total_score=total_score,
                          quiz_scores=quiz_scores,
-                         total_quizzes=len(modules_data)-6)  # First 6 are learning modules
+                         total_quizzes=len(modules_data)-13)  # First 13 are learning modules
 
 if __name__ == '__main__':
     app.run(debug=True)
