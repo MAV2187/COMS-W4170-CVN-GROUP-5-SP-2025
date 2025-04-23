@@ -55,6 +55,11 @@ body {
     font-weight: bold;
 }
 
+/* Module Headline Styles */
+.color_header1 {
+    background-color: var(--accent-color);
+}
+
 /* Card Styles */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
