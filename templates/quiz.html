@@ -152,10 +152,10 @@
     </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">
-            {% if module_id > 7 %}
-            <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+            {% if module_id > 13 %}
+            <a href="{{ url_for('load_module', module_id=14) }}" class="btn btn-secondary">Restart Quiz</a>
             {% else %}
-            <a href="{{ url_for('load_module', module_id=6) }}" class="btn btn-info">Back to Learning</a>
+            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-info">Back to Learning</a>
             {% endif %}
             
             <div class="text-muted me-3 d-none d-md-block">
