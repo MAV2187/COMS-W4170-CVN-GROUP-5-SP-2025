@@ -159,10 +159,10 @@
             {% endif %}
             
             <div class="text-muted me-3 d-none d-md-block">
-                Module {{ module_id }} of {{ total_modules }}
+                Module {{ module_id - 13 }} of {{ total_modules -13 }}
             </div>
             
-            <button type="submit" form="quizForm" class="btn btn-primary">
+            <button type="submit" form="quizForm" class="btn btn-primary color_button1">
                 {% if module_id < total_modules %}Submit and Continue {% else %}Finish Quiz{% endif %}
             </button>
         </div>

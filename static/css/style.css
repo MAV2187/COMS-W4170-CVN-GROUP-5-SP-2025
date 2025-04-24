@@ -60,6 +60,17 @@ body {
     background-color: var(--accent-color);
 }
 
+.color_button1 {
+    background-color: var(--accent-highlight-color);
+    color: var(--secondary-color);
+    box-shadow: var(--black-color) 0px 0px 5px;
+}
+
+.color_button1:hover {
+    background-color: lightgray;
+    color: black;
+}
+
 /* Card Styles */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

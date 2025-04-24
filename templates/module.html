@@ -57,17 +57,21 @@
     <div class="card-footer">
         <div class="d-flex justify-content-between">
             {% if module_id > 1 %}
-            <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+                {% if module_id == 13 %}
+                <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary">Back to Beginning</a>
+                {% else %}
+                <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+                {% endif %}
             {% else %}
             <span></span>
             {% endif %}
             
             <div class="text-muted">
-                Module {{ module_id }} of {{ total_modules }}
+                Module {{ module_id }} of {{ total_modules - 5 }}
             </div>
             
             {% if module_id < total_modules %}
-            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary">Next</a>
+            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary color_button1">Next</a>
             {% else %}
             <a href="{{ url_for('load_module', module_id=7) }}" class="btn btn-success">Start Quizzes</a>
             {% endif %}
