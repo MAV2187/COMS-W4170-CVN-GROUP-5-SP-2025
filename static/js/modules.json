@@ -56,7 +56,7 @@
     "4": {
         "title": "Shapes That Vary Along 2 Axes",
         "progress": "27",
-        "content": "<h5><ul><li><p>Certain 3d shapes vary along two different axis, such as a spring, which consists of a 2d profile (a circle) along a 3 dimensional line (a helix).</li></h5><li> Objects like these are a natural progression of the basic 3D primitives since they vary in two dimensions rather than 1.</p> </li></ul><br> <br>",
+        "content": "<br><h5><ul><li><p>Certain 3d shapes vary along two different axis, such as a spring, which consists of a 2d profile (a circle) along a 3 dimensional line (a helix).</li></h5><li> Objects like these are a natural progression of the basic 3D primitives since they vary in two dimensions rather than 1.</p> </li></ul><br> <br>",
         "type": 2,
         "mediaTitle":"",
         "image1": "Torus.gif",
@@ -74,7 +74,7 @@
     "5": {
         "title": "Negative Space",
         "progress": "33",
-        "content": "<h5><ul><li><p>In addition to positive space, these primitives may also be used to create negative space. These negative space primitives are used to create hollow volumes.</li></h5></ul> <br> Examples of this include:</p> <br> <ul><li>A <span class=\"fw-bold\">pipe</span>: a cylinder with a second negative space cylinder inside</li><br><br><li>A <span class=\"fw-bold\">basketball</span>: a positive space sphere with a smaller negative space sphere inside</li><br><br><li>A <span class=\"fw-bold\">bicycle inner tube</span>: a torus with a smaller negative space torus inside</li><br><br><li>A <span class=\"fw-bold\">hole in a piece of wood</span>: a rectangular prism with a negative space cylinder inside</li></ul>",
+        "content": "<br><h5><ul><li><p>In addition to positive space, these primitives may also be used to create negative space. These negative space primitives are used to create hollow volumes.</li></h5></ul> <br> Examples of this include:</p> <br> <ul><li>A <span class=\"fw-bold\">pipe</span>: a cylinder with a second negative space cylinder inside</li><br><br><li>A <span class=\"fw-bold\">basketball</span>: a positive space sphere with a smaller negative space sphere inside</li><br><br><li>A <span class=\"fw-bold\">bicycle inner tube</span>: a torus with a smaller negative space torus inside</li><br><br><li>A <span class=\"fw-bold\">hole in a piece of wood</span>: a rectangular prism with a negative space cylinder inside</li></ul>",
         "type": 1,
         "mediaTitle":"",
         "image1": "Pipe.jpg",
@@ -92,9 +92,9 @@
     "6": {
         "title": "Combining Similar Primitives",
         "progress": "40",
-        "content": "<h5><ul><li><p>Often these primitives come in pairs and can be combined to create more complex volumes. A common volume made using multiple cylinders is a medicine bottle. </p></li></h5></ul><br>",
+        "content": "<br><h5><ul><li><p>Often these primitives come in pairs and can be combined to create more complex volumes. A common volume made using multiple cylinders is a medicine bottle. </p></li></h5></ul><br>",
         "type": 2,
-        "mediaTitle": "<h5>This is made using the following progression:</h5><br><br>",
+        "mediaTitle": "<h5>This is made using the following progression:</h5><br>",
         "image1": "",
         "smallModel1": "Pill_Bottle_1.glb",
         "caption1": "1. A positive cylinder making the main body (red)",
@@ -110,7 +110,7 @@
     "7": {
         "title": "Combining Different Primitives",
         "progress": "47",
-        "content": "<h5><ul><li><p>Combining different types of basic primitives can yield more complex shapes that vary in all three dimensions. </li></h5></ul><br> </p>",
+        "content": "<br><h5><ul><li><p>Combining different types of basic primitives can yield more complex shapes that vary in all three dimensions. </li></h5></ul><br> </p>",
         "type": 2,
         "mediaTitle":"<h5>For example, a pill shape can be thought of as a cylinder with rounded ends. This consists of:</h5>",
         "image1": "",
@@ -128,7 +128,7 @@
     "8": {
         "title": "Case Study: Smart Switch - Introduction",
         "progress": "53",
-        "content": "<h5><ul><li><p>These ideas are the building blocks of many common shapes around us. Let's apply this by taking a look at a more complex real-world shape: a <strong>keyed pinion gear</strong>.</li></h5></ul><br></p><p>",
+        "content": "<br><h5><ul><li><p>These ideas are the building blocks of many common shapes around us. Let's apply this by taking a look at a more complex real-world shape: a <strong>keyed pinion gear</strong>.</li></h5></ul></p><p>",
         "type": 2,
         "mediaTitle":"",
         "image1": "SmartPlug_Front.JPG",
@@ -146,7 +146,7 @@
     "9": {
         "title": "Case Study: Smart Switch - Rectangular Prisms",
         "progress": "60",
-        "content": "<h5><ul><li>Let's begin by looking at the Rectangular Prisms that make up the volume:</li></ul></h5><br><br>",
+        "content": "<br><h5><ul><li>Let's begin by looking at the Rectangular Prisms that make up the volume:</li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -164,7 +164,7 @@
     "10": {
         "title": "Case Study: Smart Switch - Cylinders I",
         "progress": "67",
-        "content": "<h5><ul><li>Next lets identify the cylinders that make up the volume:</li></ul></h5><br><br>",
+        "content": "<br><h5><ul><li>Next lets identify the cylinders that make up the volume:</li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -182,7 +182,7 @@
     "11": {
         "title": "Case Study: Smart Switch - Cylinders II",
         "progress": "73",
-        "content": "<h5><ul><li>Continuing with cylinder identification: </li></ul></h5><br><br>",
+        "content": "<br><h5><ul><li>Continuing with cylinder identification: </li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -200,7 +200,7 @@
     "12": {
         "title": "Case Study: Smart Switch - Spheres",
         "progress": "80",
-        "content": "<h5><ul><li>Next lets identify the spheres that make up the volume:</li></ul></h5><br><br>",
+        "content": "<br><h5><ul><li>Next lets identify the spheres that make up the volume:</li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -218,7 +218,7 @@
     "13": {
         "title": "Case Study: Smart Switch - Wedges",
         "progress": "87",
-        "content": "<h5><ul><li>Next lets identify the wedges that make up the volume:</li></ul></h5><br><br>",
+        "content": "<br><h5><ul><li>Next lets identify the wedges that make up the volume:</li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -236,7 +236,7 @@
     "14": {
         "title": "Case Study: Smart Switch - 2D Profile Swept Along A Path",
         "progress": "93",
-        "content": "<h5><ul><li>Finally, lets identify the 2D Profile Swept Along a Path, the final feature that makes up this volume:</li></ul></h5><br>",
+        "content": "<br><h5><ul><li>Finally, lets identify the 2D Profile Swept Along a Path, the final feature that makes up this volume:</li></ul></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
@@ -254,7 +254,7 @@
     "15": {
         "title": "Conclusion & Quiz Readiness",
         "progress": "100",
-        "content": "<h5><ul><li>With these concepts in mind, look around the room and try to break down everyday objects into basic primitives — whether that be 2D shapes along a path or 3D primitives.</li></h5><li>Most mechanical objects and simple items can be broken down into discrete shapes.</li><li> Once these shapes have been identified, modeling them and representing them digitally becomes a much easier next step.</li></ul><br><br><br><br><br><br><h5><p>To review the information again, press the learn button above. If you feel ready, press the next button to proceed to the quiz to test your knowledge.</p></h5>",
+        "content": "<br><h5><ul><li>With these concepts in mind, look around the room and try to break down everyday objects into basic primitives — whether that be 2D shapes along a path or 3D primitives.</li></h5><li>Most mechanical objects and simple items can be broken down into discrete shapes.</li><li> Once these shapes have been identified, modeling them and representing them digitally becomes a much easier next step.</li></ul><br><br><br><br><br><br><h5><p>To review the information again, press the learn button above. If you feel ready, press the next button to proceed to the quiz to test your knowledge.</p></h5>",
         "type": 1,
         "mediaTitle":"",
         "image1": "Altoids.JPG",
