@@ -37,7 +37,7 @@ def save_user_progress(username, module_id, score=None):
             'last_accessed': datetime.now().isoformat()
         }
     
-    if module_id <= 13:  # Learning modules
+    if module_id <= 15:  # Learning modules
         user_progress[username]['current_module'] = module_id
     elif score is not None:  # Quiz modules
         user_progress[username]['quiz_scores'][str(module_id)] = score
@@ -75,13 +75,22 @@ def load_module(module_id):
     save_user_progress(username, module_id)
     
     module = modules_data[str(module_id)]
-    template = 'module.html' if module_id <= 13 else 'quiz.html'
-    
+    template = 'module.html' if module_id <= 15 else 'quiz.html'
+
+    with open('user_progress.json', 'r') as f:
+        user_progress = json.load(f)
+
+    saved_answers = user_progress.get(username, {}).get('answers', {}).get(str(module_id)) or {}
+    print(f"username: {username}")
+    print(f"module_id: {module_id}")
+    print(f"saved_answers: {saved_answers}")
+
     return render_template(template,
                          module=module,
                          module_id=module_id,
-                         is_quiz=module_id > 13,
-                         total_modules=len(modules_data))
+                         is_quiz=module_id > 15,
+                         total_modules=len(modules_data),
+                         saved_answers=saved_answers)
 
 @app.route('/submit_quiz/<int:module_id>', methods=['POST'])
 def submit_quiz(module_id):
@@ -146,7 +155,18 @@ def show_results():
     
     username = session['username']
     total_score = calculate_total_score(username)
-    
+
+    with open('user_progress.json', 'r') as f:
+        user_progress = json.load(f)
+
+    if username in user_progress:
+        if 'answers' in user_progress[username]:
+            user_progress[username]['answers'] = {}
+
+        # ✅ Save the cleared data back to the file
+        with open('user_progress.json', 'w') as f:
+            json.dump(user_progress, f, indent=4)
+
     with open('user_progress.json', 'r') as f:
         user_progress = json.load(f)
         quiz_scores = user_progress.get(username, {}).get('quiz_scores', {})
@@ -154,7 +174,46 @@ def show_results():
     return render_template('results.html',
                          total_score=total_score,
                          quiz_scores=quiz_scores,
-                         total_quizzes=len(modules_data)-13)  # First 13 are learning modules
+                         total_quizzes=len(modules_data)-15)  # First 15 are learning modules
+
+@app.route('/save_answer', methods=['POST'])
+def save_answer():
+    if 'username' not in session:
+        return jsonify({'status': 'error', 'message': 'Not logged in'}), 401
+
+    username = session['username']
+    data = request.get_json()
+
+    question_id = data.get('question_id')
+    selected_answer = data.get('selected_answer')
+    module_id = data.get('module_id')
+
+    if not question_id or selected_answer is None or module_id is None:
+        return jsonify({'status': 'error', 'message': 'Missing data'}), 400
+
+    with open('user_progress.json', 'r') as f:
+        user_progress = json.load(f)
+
+    if username not in user_progress:
+        user_progress[username] = {
+            'current_module': module_id,
+            'quiz_scores': {},
+            'answers': {},
+            'last_accessed': datetime.now().isoformat()
+        }
+
+    if 'answers' not in user_progress[username]:
+        user_progress[username]['answers'] = {}
+
+    # Save the answer
+    user_progress[username]['answers'][str(module_id)] = user_progress[username]['answers'].get(str(module_id), {})
+    user_progress[username]['answers'][str(module_id)][question_id] = selected_answer
+    user_progress[username]['last_accessed'] = datetime.now().isoformat()
+
+    with open('user_progress.json', 'w') as f:
+        json.dump(user_progress, f, indent=4)
+
+    return jsonify({'status': 'success'})
 
 if __name__ == '__main__':
     app.run(debug=True)
