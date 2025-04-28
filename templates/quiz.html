@@ -258,6 +258,7 @@ $(document).ready(function() {
     // Remove item from drop zone
     $(document).on('click', '.remove-item', function() {
         const badge = $(this).closest('.badge');
+        const value = badge.data('value');
         const dropZone = badge.closest('.drop-zone');
         badge.remove();
         $(`.drag-item[data-value="${value}"]`).show();
