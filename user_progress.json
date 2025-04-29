@@ -242,28 +242,16 @@
         }
     },
     "asdf": {
-        "current_module": 15,
+        "current_module": 1,
         "quiz_scores": {
             "16": 0.0,
             "17": 0.0,
-            "18": 0.0
+            "18": 0.0,
+            "19": 0.0,
+            "20": 0.0
         },
-        "last_accessed": "2025-04-27T03:37:54.400088",
-        "answers": {
-            "16": {
-                "q1": "B"
-            },
-            "17": {
-                "q1": "sphere,rectangular prism"
-            },
-            "18": {
-                "q1": "rectangular prism"
-            },
-            "19": {
-                "q1_A": "1",
-                "q1_B": "2"
-            }
-        }
+        "last_accessed": "2025-04-28T23:24:27.636723",
+        "answers": {}
     },
     "testUser20": {
         "current_module": 1,
@@ -312,5 +300,17 @@
         "current_module": 14,
         "quiz_scores": {},
         "last_accessed": "2025-04-27T03:32:13.033940"
+    },
+    "wetwetrwetwretre": {
+        "current_module": 15,
+        "quiz_scores": {
+            "16": 100.0,
+            "17": 0.0,
+            "18": 100.0,
+            "19": 100.0,
+            "20": 0.0
+        },
+        "last_accessed": "2025-04-28T23:25:07.034928",
+        "answers": {}
     }
 }
