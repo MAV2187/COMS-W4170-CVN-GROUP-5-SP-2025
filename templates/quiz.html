@@ -147,7 +147,7 @@
         </form>
     </div>
     <div class="progress">
-        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{ module.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ module.progress }}%;">{{ module.progress }}%</div>
+        <div class="progress-bar color_navbar" role="progressbar" aria-valuenow="{{ module.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ module.progress }}%;"></div>
     </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">
@@ -158,7 +158,7 @@
             {% endif %}
             
             <div class="text-muted me-3 d-none d-md-block">
-                Module {{ module_id - 15 }} of {{ total_modules -15 }}
+                Question {{ module_id - 15 }} of {{ total_modules -15 }}
             </div>
             
             <button type="submit" form="quizForm" class="btn btn-primary color_button1">
