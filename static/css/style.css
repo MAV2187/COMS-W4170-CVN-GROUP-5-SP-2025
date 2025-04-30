@@ -17,10 +17,17 @@ body {
 /* Module Headline Styles */
 .color_header1 {
     background-color: var(--main-color);
+    margin: .8rem !important;
+    border-radius: 1rem !important; 
 }
 
 .color_button2{
     color: var(--secondary-color);
+}
+
+.color_button2:hover {
+    background-color: var(--secondary-color);
+    color: var(--black-color);
 }
 
 .color_button1 {
@@ -32,6 +39,11 @@ body {
 .color_button1:hover {
     background-color: lightgray;
     color: black;
+}
+
+.color_navbar {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
 }
 
 /* Card Styles */
