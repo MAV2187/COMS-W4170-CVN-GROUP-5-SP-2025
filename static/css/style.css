@@ -10,17 +10,21 @@
 }
 
 body {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     padding-bottom: 50px;
 }
 
 /* Module Headline Styles */
 .color_header1 {
-    background-color: var(--accent-color);
+    background-color: var(--main-color);
+}
+
+.color_button2{
+    color: var(--secondary-color);
 }
 
 .color_button1 {
-    background-color: var(--accent-highlight-color);
+    background-color: var(--accent-color);
     color: var(--secondary-color);
     box-shadow: var(--black-color) 0px 0px 5px;
 }
@@ -104,6 +108,7 @@ body {
 
 .progress-bar {
     transition: width 1s ease-in-out;
+    background-color: var(--main-color);
 }
 
 /* Responsive adjustments */

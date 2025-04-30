@@ -29,7 +29,8 @@
                 {% if 'username' in session %}
                 <div class="d-flex align-items-center">
                     <span class="navbar-text me-3">Hello, {{ session['username'] }}</span>
-                    <a class="btn btn-sm btn-outline-warning" href="{{ url_for('index') }}">Change Name & Restart</a>
+                    <span class="navbar-text me-3">|</span>
+                    <a class="btn btn-sm color_button2" href="{{ url_for('index') }}">Change Name & Restart</a>
                 </div>
                 {% endif %}
             </div>
