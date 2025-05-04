@@ -1,7 +1,10 @@
-// Global application scripts can be added here
-console.log("3D Conceptualization Using Basic Primitives & Swept 2D Profiles application loaded");
+console.log("3D Conceptualization application loaded");
 
-// Additional interactive elements can be initialized here
-$(document).ready(function() {
-    // Any global functionality can be added
+document.addEventListener('DOMContentLoaded', () => {
+    const nameInput = document.getElementById('username');
+    const continueBtn = document.getElementById('continueBtn');
+
+    nameInput.addEventListener('input', () => {
+        continueBtn.disabled = nameInput.value.trim() === '';
+    });
 });
