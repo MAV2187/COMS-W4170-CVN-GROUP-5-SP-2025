@@ -91,6 +91,7 @@ h1 {
     color: white;
     border-radius: 1rem;
     font-size: 1.5rem;
+    margin: auto;
 }
 
 .name-label {
