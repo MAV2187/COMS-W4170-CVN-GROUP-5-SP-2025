@@ -34,7 +34,7 @@
         "caption3": "Wedge",
         "smallModel4":"Sphere.glb",
         "caption4":"Sphere",
-        "takeawayContent":"<br><br><br><h5><div>Note: These primitives may be cut to form <strong>halves</strong>, <strong>quarters</strong>, or <strong>any subdivision</strong></div></h5>",
+        "takeawayContent":"<br><br><br><h5><div>Note: These primitives may be cut to form <strong>halves</strong>, <strong>quarters</strong>, or any <strong>subdivision</strong></div></h5>",
         "rightModel": ""
     },
     "3": {
