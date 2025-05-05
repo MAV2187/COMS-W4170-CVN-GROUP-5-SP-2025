@@ -75,7 +75,7 @@ def load_module(module_id):
     save_user_progress(username, module_id)
     
     module = modules_data[str(module_id)]
-    template = 'module.html' if module_id <= 15 else 'quiz.html'
+    template = 'module.html' if module_id <= 16 else 'quiz.html'
 
     with open('user_progress.json', 'r') as f:
         user_progress = json.load(f)
@@ -88,7 +88,7 @@ def load_module(module_id):
     return render_template(template,
                          module=module,
                          module_id=module_id,
-                         is_quiz=module_id > 15,
+                         is_quiz=module_id > 16,
                          total_modules=len(modules_data),
                          saved_answers=saved_answers)
 
@@ -174,7 +174,7 @@ def show_results():
     return render_template('results.html',
                          total_score=total_score,
                          quiz_scores=quiz_scores,
-                         total_quizzes=len(modules_data)-15)  # First 15 are learning modules
+                         total_quizzes=len(modules_data)-16)  # First 16 are learning modules
 
 @app.route('/save_answer', methods=['POST'])
 def save_answer():

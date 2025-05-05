@@ -10,7 +10,7 @@
         <div class="module-content">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="module-text">
+                    <div class="module-text" style="text-align: center;">
                         {{ module.content|safe }}
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         </div>
         {% endif %}
         {% if module.type == 2 %}
-        <div class="module-content">
+        <div class="module-content" style="text-align: center;">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="module-text">
@@ -62,24 +62,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center" style="text-align: center;">
                     <div class="module-text">
                         {{ module.mediaTitle|safe }}
                     </div>
                 </div>
             </div>
             <div class="row">
-                {% if module.image4 or module.smallModel4 %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
                 <div class="col-lg-3">
-                {% elif module.image3 or module.smallModel3 %}
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
                 <div class="col-lg-4">
-                {% elif module.image2 or module.smallModel2 %}
+                {% elif module.image2 or module.smallModel2 or module.caption2%}
                 <div class="col-lg-6">
                 {% else %}
                 <div class="col-lg-12">
                 {% endif %}
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
                             {% if module.image1 %}
                             <img src="{{ url_for('static', filename='images/' + module.image1) }}" 
                             class="img-fluid mb-3 rounded" 
@@ -92,22 +92,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-lg-12 justify-content-center" style="text-align: center;">
                             {{ module.caption1|safe }}
                         </div>
                     </div>
                 </div>
 
-                {% if module.image4 or module.smallModel4 %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
                 <div class="col-lg-3">
-                {% elif module.image3 or module.smallModel3 %}
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
                 <div class="col-lg-4">
-                {% elif module.image2 or module.smallModel2 %}
+                {% elif module.image2 or module.smallModel2 or module.caption2%}
                 <div class="col-lg-6">
                 {% endif %}
-                {% if module.image2 or module.smallModel2 %}
+                {% if module.image2 or module.smallModel2 or module.caption2%}
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
                             {% if module.image2 %}
                             <img src="{{ url_for('static', filename='images/' + module.image2) }}" 
                             class="img-fluid mb-3 rounded" 
@@ -120,21 +120,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
                             {{ module.caption2|safe }}
                         </div>
                     </div>
                 </div>
                 {% endif %}
-                {% if module.image4 or module.smallModel4 %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
                 <div class="col-lg-3">
-                {% elif module.image3 or module.smallModel3 %}
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
                 <div class="col-lg-4">
                 {% endif %}
-                {% if module.image3 or module.smallModel3 %}
+                {% if module.image3 or module.smallModel3 or module.caption3%}
                 <!-- <div class="col-lg-4"> -->
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
                             {% if module.image3 %}
                             <img src="{{ url_for('static', filename='images/' + module.image3) }}" 
                             class="img-fluid mb-3 rounded" 
@@ -147,16 +147,16 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
                             {{ module.caption3|safe }}
                         </div>
                     </div>
                 </div>
                 {% endif %}
-                {% if module.image4 or module.smallModel4 %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
                 <div class="col-lg-3">
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
                             {% if module.image4 %}
                             <img src="{{ url_for('static', filename='images/' + module.image4) }}" 
                             class="img-fluid mb-3 rounded" 
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
                             {{ module.caption4|safe }}
                         </div>
                     </div>
@@ -177,8 +177,23 @@
                 {% endif %}
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align: center;">
                     {{ module.takeawayContent|safe }}
+                    {% if module_id == 16 %}
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-5" style="text-align: center;">
+                            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary largeBackToBeginningBtn">Back to Beginning</a>
+                        </div>
+                        <div class="col-lg-2" style="text-align: center;">
+                            <span>     </span>
+                        </div>
+                        <div class="col-lg-5" style="text-align: center;">
+                            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary largeProceedToQuizBtn">Proceed to Quiz</a>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -190,8 +205,8 @@
     <div class="card-footer">
         <div class="d-flex justify-content-between">
             {% if module_id > 1 %}
-                {% if module_id == 15 %}
-                <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary">Back to Beginning</a>
+                {% if module_id == 16 %}
+                <span></span>
                 {% else %}
                 <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
                 {% endif %}
@@ -202,11 +217,10 @@
             <div class="text-muted">
                 Module {{ module_id }} of {{ total_modules - 5 }}
             </div>
-            
-            {% if module_id < total_modules %}
-            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary color_button1">Next</a>
+            {% if module_id == 16 %}
+                <span></span>
             {% else %}
-            <a href="{{ url_for('load_module', module_id=7) }}" class="btn btn-success">Start Quizzes</a>
+            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary color_button1">Next</a>
             {% endif %}
         </div>
     </div>
