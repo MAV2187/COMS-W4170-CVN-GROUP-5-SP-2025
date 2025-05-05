@@ -11,20 +11,23 @@
             <div class="quiz-question mb-4 p-3 border rounded">
                 <h5>{{ question.text }}</h5>
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         {% if question.type == 'drag-drop' %}
                         <div class="drag-drop-question">
+                            <br><br><br>
                             <div class="drag-elements mb-3">
                                 {% for item in question.drag_items %}
                                 <span class="drag-item badge bg-secondary me-2 mb-2" draggable="true"
                                       data-value="{{ item.value }}">{{ item.text }}</span>
                                 {% endfor %}
                             </div>
+                            <br><br>
                             <p class="fw-bold">{{ question.description }}</p>
                             <div class="drop-zone p-3 border rounded bg-light mb-3">
                                 <p class="text-muted mb-0">Drop answer here</p>
                                 <input type="hidden" name="{{ question.id }}" class="drop-value" required>
                             </div>
+                            <br><br><br><br><br><br><br><br>
                         </div>
                         
                         {% elif question.type == 'matching' %}
@@ -91,29 +94,36 @@
                         </div>
                         
                         {% else %}
-                        <div class="ms-3">
-                            {% for option in question.options %}
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" 
-                                       name="{{ question.id }}" 
-                                       id="{{ question.id }}_{{ loop.index }}" 
-                                       value="{{ option.value }}" required>
-                                <label class="form-check-label" for="{{ question.id }}_{{ loop.index }}">
-                                    {{ option.text }}
-                                </label>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <span></span>
                             </div>
-                            {% endfor %}
+                            <div class="col-lg-8">
+                                <br><br>
+                                {% for option in question.options %}
+                                <div class="form-check">
+                                    <br><br>
+                                    <input class="form-check-input" type="radio" 
+                                           name="{{ question.id }}" 
+                                           id="{{ question.id }}_{{ loop.index }}" 
+                                           value="{{ option.value }}" required>
+                                    <label class="form-check-label" for="{{ question.id }}_{{ loop.index }}">
+                                        {{ option.text }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
                         {% endif %}
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="row">
                             <div class="col-lg-12">
                                 {% if module.image1 %}
                                     <img src="{{ url_for('static', filename='images/' + module.image1) }}" 
                                         class="img-fluid mb-3 rounded" 
                                         alt="{{ module.title }}"
-                                        style="height: 175px;">
+                                        style="height: 100%; max-height: 450px; width: 100%;">
                                 {% endif %}
                             </div>
                         </div>
@@ -138,7 +148,7 @@
                             </div>
                         </div>
                         {% if module.model %}
-                            <model-viewer alt="{{ module.title }}" src="{{ url_for('static', filename='models/' + module.model) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 300px;"></model-viewer>
+                            <model-viewer alt="{{ module.title }}" src="{{ url_for('static', filename='models/' + module.model) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 100%; height: 100%; max-height: 500px;">></model-viewer>
                         {% endif %}
                     </div>
                 </div>
@@ -151,14 +161,14 @@
     </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">
-            {% if module_id > 15 %}
+            {% if module_id > 16 %}
             <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
             {% else %}
             <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-info">Back to Learning</a>
             {% endif %}
             
             <div class="text-muted me-3 d-none d-md-block">
-                Question {{ module_id - 15 }} of {{ total_modules -15 }}
+                Question {{ module_id - 16 }} of {{ total_modules -16 }}
             </div>
             
             <button type="submit" form="quizForm" class="btn btn-primary color_button1">

@@ -57,6 +57,44 @@ h1 {
     color: white;
 }
 
+.largeBackToBeginningBtn {
+    background-color: 6c757d;
+    color: 6c757d;
+    font-weight: 600;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    height: 5.5rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.largeBackToBeginningBtn:hover {
+    background-color: #5c636a;
+    color: white;
+}
+
+
+.largeProceedToQuizBtn {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    height: 5.5rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.largeProceedToQuizBtn:hover {
+    background-color: var(--accent-highlight-color);
+    color: white;
+}
+
+
 /* HOMEPAGE-SPECIFIC LARGE BUTTON */
 .homepage-continue-btn {
     background-color: #245973;
@@ -92,6 +130,7 @@ h1 {
     border-radius: 1rem;
     font-size: 1.5rem;
     margin: auto;
+
 }
 
 .name-label {

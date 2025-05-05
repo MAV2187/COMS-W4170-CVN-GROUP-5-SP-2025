@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="card">
-    <div class="card-header {{ 'bg-success' if total_score >= 70 else 'bg-danger' }} text-white">
+    <div class="card-header text-white color_header1">
         <h3 class="card-title">Final Results</h3>
     </div>
     <div class="card-body text-center">
@@ -21,17 +21,16 @@
         <div class="score-details mb-5">
             <h4 class="mb-4">Quiz Breakdown</h4>
             <div class="row g-3">
-                {% for quiz_num in range(16, total_quizzes + 16) %}
+                {% for quiz_num in range(17, total_quizzes + 17) %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Question {{ quiz_num - 15 }}</h5>
-                            <div class="progress mt-2" style="height: 20px;">
-                                <div class="progress-bar {{ 'bg-success' if quiz_scores[quiz_num|string] >= 70 else 'bg-warning' if quiz_scores[quiz_num|string] >= 50 else 'bg-danger' }}" 
-                                     style="width: {{ quiz_scores[quiz_num|string] }}%">
-                                    {{ quiz_scores[quiz_num|string] }}%
-                                </div>
-                            </div>
+                            <h5 class="card-title">Question {{ quiz_num - 16 }}</h5>
+                            {% if quiz_scores[quiz_num|string] == 100.0 %}
+                                <span><strong>Correct</strong></span>
+                            {%else%}
+                                <span style="color: maroon;"><strong>Inorrect</strong></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -53,15 +52,12 @@
     </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between">
-            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-info">
+            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary">
                 Back to Learning Modules
             </a>
             <div>
-                <a href="{{ url_for('load_module', module_id=16) }}" class="btn btn-warning me-2">
+                <a href="{{ url_for('load_module', module_id=16) }}" class="btn btn-primary color_button1">
                     Retake All Quizzes
-                </a>
-                <a href="{{ url_for('index') }}" class="btn btn-secondary">
-                    Exit
                 </a>
             </div>
         </div>
