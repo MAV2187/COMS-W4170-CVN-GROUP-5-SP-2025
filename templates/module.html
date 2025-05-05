@@ -69,7 +69,9 @@
                 </div>
             </div>
             <div class="row">
-                {% if module.image3 or module.smallModel3 %}
+                {% if module.image4 or module.smallModel4 %}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 %}
                 <div class="col-lg-4">
                 {% elif module.image2 or module.smallModel2 %}
                 <div class="col-lg-6">
@@ -95,7 +97,10 @@
                         </div>
                     </div>
                 </div>
-                {% if module.image3 or module.smallModel3 %}
+
+                {% if module.image4 or module.smallModel4 %}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 %}
                 <div class="col-lg-4">
                 {% elif module.image2 or module.smallModel2 %}
                 <div class="col-lg-6">
@@ -121,8 +126,13 @@
                     </div>
                 </div>
                 {% endif %}
-                {% if module.image3 or module.smallModel3 %}
+                {% if module.image4 or module.smallModel4 %}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 %}
                 <div class="col-lg-4">
+                {% endif %}
+                {% if module.image3 or module.smallModel3 %}
+                <!-- <div class="col-lg-4"> -->
                     <div class="row">
                         <div class="col-lg-12 d-flex justify-content-center">
                             {% if module.image3 %}
@@ -139,6 +149,28 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             {{ module.caption3|safe }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if module.image4 or module.smallModel4 %}
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center">
+                            {% if module.image4 %}
+                            <img src="{{ url_for('static', filename='images/' + module.image4) }}" 
+                            class="img-fluid mb-3 rounded" 
+                            alt="{{ module.title }}"
+                            style="height: 175px;">
+                            {% endif %}
+                            {% if module.smallModel4 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel4) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            {{ module.caption4|safe }}
                         </div>
                     </div>
                 </div>
