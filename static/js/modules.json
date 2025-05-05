@@ -20,19 +20,17 @@
     "2": {
         "title": "Less Common Primitives",
         "progress": "13",
-        "content": "<br><h5><ul><li><p>Less often, basic primitives can be: </p></li></ul></h5> <br>",
+        "content": "<br><br><br><h5><p style='text-align: center;'>These primitives can then be combined into larger and more complex objects:</p></h5>",
         "type": 2,
         "mediaTitle":"",
         "image1": "",
         "smallModel1": "Wedge_Torus_Cone_Sphere.glb",
-        "caption1": "<span class=\"fw-bold\">Toruses</span> (doughnut, shown in green), <span class=\"fw-bold\">Cones</span> (funnel, shown in red) <br> <span class=\"fw-bold\">Wedges</span> (ramp, shown in blue), <span class=\"fw-bold\">Sphere</span> (ball, shown in grey)",
         "image2": "",
         "smallModel2": "",
         "caption2": "",
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent":"<br><br><br><br><ul><li><h5><p>Notice: These primitives may be cut to form halves, quarters, or any subdivision</p></li></ul></h5>",
         "rightModel": ""
     },
     "3": {
