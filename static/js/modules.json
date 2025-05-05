@@ -51,14 +51,13 @@
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent":"<br><br><br><h5><div><strong>Toruses</strong> (doughnut, shown in green), <strong>Cones</strong> (funnel, shown in red) <br> <strong>Wedges</strong> (ramp, shown in blue), <strong>Sphere</strong> (ball, shown in grey)</div></h5>",
         "rightModel": ""
 
     },
     "4": {
         "title": "3D to 2D Correlation",
         "progress": "20",
-        "content": "<br><div><h5><p>Basic primitives can be broken down into <strong>2 dimensional shapes that flow along a line or revolve about a line</strong>. For example: </p></h5></div> <br> <br> <br> <br>",
+        "content": "<br><div style='text-align: center;'><h5><p>Basic primitives can be broken down into <strong>2 dimensional shapes that flow along a line or revolve about a line</strong>.</p><p>For example:</p></h5></div><br><br>",
         "type": 2,
         "mediaTitle":"",
         "image1": "Cube.gif",
