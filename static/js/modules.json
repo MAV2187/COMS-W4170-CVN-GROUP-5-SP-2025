@@ -155,14 +155,14 @@
         "mediaTitle":"",
         "image1": "Case_Study.gif",
         "smallModel1": "",
-        "caption1": "For simplicity, assume the inside of the smart switch is solid.",
+        "caption1": "For simplicity, assume the inside of the smart switch is solid.<br><br>We must first need to think about what basic shapes would be used to fill the positive space.<br><br>We can then think about what basic shapes would be used to take away the negative space.<br></p><p>These basic primitives are: <strong>Rectangular Prisms</strong> - <strong>Cylinders</strong> - <strong>Spheres</strong> - <strong>Wedges</strong> - <strong>2D Profiles Swept Along A Path</strong>",
         "image2": "",
         "smallModel2": "",
         "caption2": "",
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent":"<br><br><br>To break this down, we need to think about what <strong>basic primitives</strong> would be used to first <strong>fill the positive space</strong>, and then <strong>take away the negative space</strong>.</p><p>These basic primitives are: <strong>Rectangular Prisms</strong> - <strong>Cylinders</strong> - <strong>Spheres</strong> - <strong>Wedges</strong> - <strong>2D Profiles Swept Along A Path</strong>",
+        "takeawayContent":"",
         "rightModel": ""
     },
     "10": {
