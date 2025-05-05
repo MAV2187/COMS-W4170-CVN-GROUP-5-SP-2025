@@ -2,19 +2,19 @@
     "1": {
         "title": "Introduction to Basic 3D Primitives",
         "progress": "7",
-        "content": "<br><h5><ul><li>Most simple objects can be broken down into basic 3d primitives or 2d profiles that follow a line. </li></ul></h5> <br>",
+        "content": "<br><h5><div style='text-align: center;'>Most simple objects can be broken down into basic 3D primitives or 2D profiles that follow a line.</div></h5>",
         "type": 2,
         "mediaTitle": "<h5>These basic 3d primitives are most often: </h5>",
         "image1": "",
         "smallModel1": "9V-Battery-Cylinder.glb",
-        "caption1": "<br><p> Cylinders (soda can), indicated by the purple arrow</p>",
+        "caption1": "<br><p> <strong>Cylinders</strong>, indicated by the purple arrow</p>",
         "image2": "",
         "smallModel2": "9V-Battery-Rectangular-Prism.glb",
-        "caption2": "<br><p>Rectangular Prisms (box), indicated by the green bounding box</p>",
+        "caption2": "<br><p><strong>Rectangular Prisms</strong>, indicated by the green bounding box</p>",
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent":"<br><br><h5><ul><li>When combined, these shapes can represent objects like a 9 volt battery</li></ul></h5>",
+        "takeawayContent": "<br><br><h5><div style='text-align: center;'>When combined, these shapes can represent objects like a 9 volt battery</div></h5>",
         "rightModel": ""
     },
     "2": {
