@@ -14,7 +14,7 @@
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent": "<br><br><h5><div>Together, these shapes form the structure of objects — like the 9-volt battery shown above.</div></h5>",
+        "takeawayContent": "<br><br><h5><div>Together, these shapes form the structure of objects - like the 9-volt battery shown above.</div></h5>",
         "rightModel": ""
     },
         "2": {
@@ -80,7 +80,7 @@
         "mediaTitle":"",
         "image1": "Torus.gif",
         "smallModel1": "",
-        "caption1": "When a 2D object, like a circle, rotates around an axis that doesn’t pass through itself, it can be described as <strong>following a path</strong>.",
+        "caption1": "When a 2D object, like a circle, rotates around an axis that doesn't pass through itself, it can be described as <strong>following a path</strong>.",
         "image2": "Spring_Still.JPG",
         "smallModel2": "",
         "caption2": "If this circular path were stretched upwards or downwards, it would create a <strong>helix</strong>",
@@ -155,14 +155,14 @@
         "mediaTitle":"",
         "image1": "Case_Study.gif",
         "smallModel1": "",
-        "caption1": "For simplicity, assume the inside of the smart switch is solid.<br><br>We must first need to think about what basic shapes would be used to fill the positive space.<br><br>We can then think about what basic shapes would be used to take away the negative space.<br></p><p>These basic primitives are: <strong>Rectangular Prisms</strong> - <strong>Cylinders</strong> - <strong>Spheres</strong> - <strong>Wedges</strong> - <strong>2D Profiles Swept Along A Path</strong>",
+        "caption1": "For simplicity, assume the inside of the smart switch is solid.",
         "image2": "",
         "smallModel2": "",
         "caption2": "",
         "image3": "",
         "smallModel3": "",
         "caption3": "",
-        "takeawayContent":"",
+        "takeawayContent":"<br><br><br>To break this down, we need to think about what <strong>basic primitives</strong> would be used to first <strong>fill the positive space</strong>, and then <strong>take away the negative space</strong>.</p><p>These basic primitives are: <strong>Rectangular Prisms</strong> - <strong>Cylinders</strong> - <strong>Spheres</strong> - <strong>Wedges</strong> - <strong>2D Profiles Swept Along A Path</strong>",
         "rightModel": ""
     },
     "10": {
