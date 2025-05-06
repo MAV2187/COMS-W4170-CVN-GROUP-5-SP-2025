@@ -87,7 +87,7 @@
                             style="height: 175px;">
                             {% endif %}
                             {% if module.smallModel1 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 500px; width: 100%;"></model-viewer>
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
                             {% endif %}
                         </div>
                     </div>
@@ -182,14 +182,14 @@
                     {% if module_id == 16 %}
                     <br>
                     <br>
-                    <div class="row">
-                        <div class="col-lg-5" style="text-align: center;">
+                    <div class="row qr">
+                        <div class="col-lg-4" style="text-align: center;">
                             <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary largeBackToBeginningBtn">Back to Beginning</a>
                         </div>
-                        <div class="col-lg-2" style="text-align: center;">
+                        <div class="col-lg-4" style="text-align: center;">
                             <span>     </span>
                         </div>
-                        <div class="col-lg-5" style="text-align: center;">
+                        <div class="col-lg-4" style="text-align: center;">
                             <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary largeProceedToQuizBtn">Proceed to Quiz</a>
                         </div>
                     </div>
