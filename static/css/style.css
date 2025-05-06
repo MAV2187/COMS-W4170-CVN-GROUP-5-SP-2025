@@ -58,15 +58,18 @@ h1 {
 }
 
 .largeBackToBeginningBtn {
-    background-color: 6c757d;
-    color: 6c757d;
+    background-color: #6c757d;
+    color: white;
     font-weight: 600;
-    font-size: 3rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem; /* Smaller font size */
+    border-radius: 0.3rem; /* Slightly smaller border radius */
+    padding: 0.3rem 0.8rem; /* Reduced padding */
     border: none;
-    height: 5.5rem;
-    width: 100%;
+    height: 3rem; /* Smaller height */
+    width: 80%; /* Adjusted width */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
     transition: background-color 0.2s ease;
 }
 
