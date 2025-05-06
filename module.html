@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header text-white color_header1 d-flex align-items-center">
+        <h3 class="card-title mb-0">{{ module.title }}</h3>
+    </div>
+    <div class="card-body" style="height: 600px;">
+        {% if module.type == 1 %}
+        <div class="module-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="module-text" style="text-align: center;">
+                        {{ module.content|safe }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image1 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image1) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image2 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image2) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {% if module.image3 %}
+                                <img src="{{ url_for('static', filename='images/' + module.image3) }}" 
+                                     class="img-fluid mb-3 rounded" 
+                                     alt="{{ module.title }}"
+                                     style="height: 175px;">
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if module.rightModel %}
+                        <model-viewer alt="{{ module.title }}" src="{{ url_for('static', filename='models/' + module.rightModel) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 100%;"></model-viewer>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if module.type == 2 %}
+        <div class="module-content" style="text-align: center;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="module-text">
+                        {{ module.content|safe }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center" style="text-align: center;">
+                    <div class="module-text">
+                        {{ module.mediaTitle|safe }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% if module.image4 or module.smallModel4 or module.caption4%}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
+                <div class="col-lg-4">
+                {% elif module.image2 or module.smallModel2 or module.caption2%}
+                <div class="col-lg-6">
+                {% else %}
+                <div class="col-lg-12">
+                {% endif %}
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
+                            {% if module.image1 %}
+                            <img src="{{ url_for('static', filename='images/' + module.image1) }}" 
+                            class="img-fluid mb-3 rounded" 
+                            alt="{{ module.title }}"
+                            style="height: 175px;">
+                            {% endif %}
+                            {% if module.smallModel1 %}
+                            {% if module_id == 3 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 500px; width: 100%;"></model-viewer>
+                            {% elif module_id == 8 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 350px; width: 100%;"></model-viewer>
+                            {% else %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 justify-content-center" style="text-align: center;">
+                            {{ module.caption1|safe }}
+                        </div>
+                    </div>
+                </div>
+
+                {% if module.image4 or module.smallModel4 or module.caption4%}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
+                <div class="col-lg-4">
+                {% elif module.image2 or module.smallModel2 or module.caption2%}
+                <div class="col-lg-6">
+                {% endif %}
+                {% if module.image2 or module.smallModel2 or module.caption2%}
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
+                            {% if module.image2 %}
+                            <img src="{{ url_for('static', filename='images/' + module.image2) }}" 
+                            class="img-fluid mb-3 rounded" 
+                            alt="{{ module.title }}"
+                            style="height: 175px;">
+                            {% endif %}
+                            {% if module.smallModel2 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel2) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
+                            {{ module.caption2|safe }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
+                <div class="col-lg-3">
+                {% elif module.image3 or module.smallModel3 or module.caption3%}
+                <div class="col-lg-4">
+                {% endif %}
+                {% if module.image3 or module.smallModel3 or module.caption3%}
+                <!-- <div class="col-lg-4"> -->
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
+                            {% if module.image3 %}
+                            <img src="{{ url_for('static', filename='images/' + module.image3) }}" 
+                            class="img-fluid mb-3 rounded" 
+                            alt="{{ module.title }}"
+                            style="height: 175px;">
+                            {% endif %}
+                            {% if module.smallModel3 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel3) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
+                            {{ module.caption3|safe }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if module.image4 or module.smallModel4 or module.caption4%}
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center" style="text-align: center;">
+                            {% if module.image4 %}
+                            <img src="{{ url_for('static', filename='images/' + module.image4) }}" 
+                            class="img-fluid mb-3 rounded" 
+                            alt="{{ module.title }}"
+                            style="height: 175px;">
+                            {% endif %}
+                            {% if module.smallModel4 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel4) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center" style="text-align: center;">
+                            {{ module.caption4|safe }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center;">
+                    {{ module.takeawayContent|safe }}
+                    {% if module_id == 16 %}
+                    <br>
+                    <br>
+                    <div class="row qr">
+                        <div class="col-lg-4" style="text-align: center;">
+                            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary largeBackToBeginningBtn">Back to Beginning</a>
+                        </div>
+                        <div class="col-lg-4" style="text-align: center;">
+                            <span>     </span>
+                        </div>
+                        <div class="col-lg-4" style="text-align: center;">
+                            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary largeProceedToQuizBtn">Proceed to Quiz</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{ module.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ module.progress }}%;"></div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between">
+            {% if module_id > 1 %}
+                {% if module_id == 16 %}
+                <span></span>
+                {% else %}
+                <a href="{{ url_for('load_module', module_id=module_id-1) }}" class="btn btn-secondary">Back</a>
+                {% endif %}
+            {% else %}
+            <span></span>
+            {% endif %}
+            
+            <div class="text-muted">
+                Module {{ module_id }} of {{ total_modules - 5 }}
+            </div>
+            {% if module_id == 16 %}
+                <span></span>
+            {% else %}
+            <a href="{{ url_for('load_module', module_id=module_id+1) }}" class="btn btn-primary color_button1">Next</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    // Highlight current module in dropdown
+    const currentModule = {{ module_id }};
+    $(`.dropdown-item[href*="/module/${currentModule}"]`).addClass('active');
+});
+</script>
+{% endblock %}
