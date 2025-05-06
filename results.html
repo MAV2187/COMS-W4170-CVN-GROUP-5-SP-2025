@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header text-white color_header1">
+        <h3 class="card-title">Final Results</h3>
+    </div>
+    <div class="card-body text-center">
+        <h2 class="mb-4">Your Overall Score: {{ "%.1f"|format(total_score) }}%</h2>
+        
+        <div class="progress mb-4" style="height: 30px;">
+            <div class="progress-bar {{ 'bg-success' if total_score >= 70 else 'bg-danger' }}" 
+                 role="progressbar" 
+                 style="width: {{ total_score }}%" 
+                 aria-valuenow="{{ total_score }}" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100">
+            </div>
+        </div>
+        
+        <div class="score-details mb-5">
+            <h4 class="mb-4">Quiz Breakdown</h4>
+            <div class="row g-3">
+                {% for quiz_num in range(17, total_quizzes + 17) %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Question {{ quiz_num - 16 }}</h5>
+                            {% if quiz_scores[quiz_num|string] == 100.0 %}
+                                <span>Correct</span>
+                            {%else%}
+                                <span><strong>Incorrect</strong></span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        {% if total_score >= 70 %}
+        <div class="alert alert-success">
+            <h4 class="alert-heading">Congratulations!</h4>
+            <p>You've successfully completed all quizzes with a passing score!</p>
+        </div>
+        {% else %}
+        <div class="alert alert-danger">
+            <h4 class="alert-heading">Keep Practicing!</h4>
+            <p>Review the learning modules and try again to improve your score.</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between">
+            <a href="{{ url_for('load_module', module_id=1) }}" class="btn btn-secondary">
+                Back to Learning Modules
+            </a>
+            <div>
+                <a href="{{ url_for('load_module', module_id=17) }}" class="btn btn-primary color_button1">
+                    Retake All Quizzes
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
