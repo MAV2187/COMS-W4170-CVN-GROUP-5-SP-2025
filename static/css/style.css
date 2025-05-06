@@ -57,16 +57,20 @@ h1 {
     color: white;
 }
 
+/* Back to Beginning Button */
 .largeBackToBeginningBtn {
-    background-color: 6c757d;
-    color: 6c757d;
+    background-color: #6c757d;
+    color: white;
     font-weight: 600;
-    font-size: 3rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem; /* Smaller font size */
+    border-radius: 0.3rem; /* Slightly smaller border radius */
+    padding: 0.3rem 0.8rem; /* Reduced padding */
     border: none;
-    height: 5.5rem;
-    width: 100%;
+    height: 3rem; /* Smaller height */
+    width: 80%; /* Adjusted width */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
     transition: background-color 0.2s ease;
 }
 
@@ -75,25 +79,28 @@ h1 {
     color: white;
 }
 
-
+/* Proceed to Quiz Button */
 .largeProceedToQuizBtn {
     background-color: var(--accent-color);
     color: var(--secondary-color);
     font-weight: 600;
-    font-size: 3rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem; /* Smaller font size */
+    border-radius: 0.3rem; /* Slightly smaller border radius */
+    padding: 0.3rem 0.8rem; /* Reduced padding */
     border: none;
-    height: 5.5rem;
-    width: 100%;
+    height: 3rem; /* Smaller height */
+    width: 80%; /* Adjusted width */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
     transition: background-color 0.2s ease;
+    float:right;
 }
 
 .largeProceedToQuizBtn:hover {
     background-color: var(--accent-highlight-color);
     color: white;
 }
-
 
 /* HOMEPAGE-SPECIFIC LARGE BUTTON */
 .homepage-continue-btn {
@@ -288,24 +295,6 @@ h1 {
     color: #212529;
 }
 
-
-
-/* Quiz Styles */
-
-.custom_radio{
-    border: 4px solid var(--main-color);
+.qr {
+    margin-top: 30px;
 }
-
-.custom_form_check{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    width: 15rem;
-}
-
-.custom_form_label{
-    width: 100%;
-    height: 100%;
-    margin-left: 1rem;
-}
-
