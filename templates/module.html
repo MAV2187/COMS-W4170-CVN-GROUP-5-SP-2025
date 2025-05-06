@@ -87,7 +87,13 @@
                             style="height: 175px;">
                             {% endif %}
                             {% if module.smallModel1 %}
+                            {% if module_id == 3 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 500px; width: 100%;"></model-viewer>
+                            {% elif module_id == 8 %}
+                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 350px; width: 100%;"></model-viewer>
+                            {% else %}
                             <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            {% endif %}
                             {% endif %}
                         </div>
                     </div>
