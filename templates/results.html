@@ -27,9 +27,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Question {{ quiz_num - 16 }}</h5>
                             {% if quiz_scores[quiz_num|string] == 100.0 %}
-                                <span><strong>Correct</strong></span>
+                                <span>Correct</span>
                             {%else%}
-                                <span style="color: maroon;"><strong>Incorrect</strong></span>
+                                <span><strong>Incorrect</strong></span>
                             {% endif %}
                         </div>
                     </div>
