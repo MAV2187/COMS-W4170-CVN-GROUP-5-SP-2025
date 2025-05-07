@@ -46,7 +46,10 @@
                         </div>
                     </div>
                     {% if module.rightModel %}
+                    <div class="model-container">
                         <model-viewer alt="{{ module.title }}" src="{{ url_for('static', filename='models/' + module.rightModel) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 100%;"></model-viewer>
+                        <img src="360tooltip.png" alt="Overlay" class="overlay-image">
+                    </div>
                     {% endif %}
                 </div>
             </div>
@@ -88,11 +91,20 @@
                             {% endif %}
                             {% if module.smallModel1 %}
                             {% if module_id == 3 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 500px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 500px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% elif module_id == 8 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 350px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 350px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% else %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel1) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% endif %}
                             {% endif %}
                         </div>
@@ -121,7 +133,10 @@
                             style="height: 175px;">
                             {% endif %}
                             {% if module.smallModel2 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel2) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel2) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% endif %}
                         </div>
                     </div>
@@ -148,7 +163,10 @@
                             style="height: 175px;">
                             {% endif %}
                             {% if module.smallModel3 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel3) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel3) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% endif %}
                         </div>
                     </div>
@@ -170,7 +188,10 @@
                             style="height: 175px;">
                             {% endif %}
                             {% if module.smallModel4 %}
-                            <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel4) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                            <div class="model-container">
+                                <model-viewer alt="{{ module.title }}" camera-orbit="45deg 55deg 4m" src="{{ url_for('static', filename='models/' + module.smallModel4) }}" shadow-intensity="1" camera-controls touch-action="pan-y" style="height: 275px; width: 100%;"></model-viewer>
+                                <img src="{{ url_for('static', filename='images/360tooltip.png') }}" alt="Overlay" class="overlay-image">
+                            </div>
                             {% endif %}
                         </div>
                     </div>
