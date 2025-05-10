@@ -335,11 +335,9 @@ h1 {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 65px; /* Adjust size as needed */
+    width: 55px; /* Adjust size as needed */
     height: auto;
     z-index: 10;
     pointer-events: none; /* Allows interaction with model underneath */
-    border: 2px solid white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--main-color);
+    opacity: 0.7;
 }
