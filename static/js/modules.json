@@ -62,7 +62,7 @@
         "mediaTitle":"",
         "image1": "Cube.gif",
         "smallModel1": "",
-        "caption1": "<div style='text-align: center;'>A <strong>Cube</strong> consists of a Square rotated along a line normal to it</div>",
+        "caption1": "<div style='text-align: center;'>A <strong>Cube</strong> consists of a Square moving along a line normal to it</div>",
         "image2": "Cone.gif",
         "smallModel2": "",
         "caption2": "<div style='text-align: center;'>A <strong>Cone</strong> consists of a Triangle rotated about one of its legs</div>",
