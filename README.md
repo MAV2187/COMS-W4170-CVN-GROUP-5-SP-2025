@@ -4,9 +4,9 @@ python server.py
 # Server Endpoint
 http://127.0.0.1:5000/
 
-## Prerequisites
+# Prerequisites
 
-# Flask API Server
+## Flask API Server
 A lightweight Flask-based API server for handling JSON data and file operations.
 
 ## Features
@@ -15,24 +15,23 @@ A lightweight Flask-based API server for handling JSON data and file operations.
 - Environment configuration management
 - Simple and easy to extend
 
+## Installation
 - Python 3.6+
 - pip package manager
 
-## Installation
-
-# Clone repository
+## Clone repository
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
 
-# Create and activate virtual environment (recommended)
+## Create and activate virtual environment (recommended)
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+## Install dependencies
 pip install flask
 
-# Project Structure
-├── server.py            # Main application
-├── config/              # Configuration files
-├── static/              # Static files
+## Project Structure
+├── server.py            # Main application \
+├── config/              # Configuration file \
+├── static/              # Static files \
 └── templates/           # Templates
